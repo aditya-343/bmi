@@ -1,0 +1,104 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f0f0f0;
+    --button-color: #1a73e8;
+    --button-hover: #1557b0;
+}
+
+.dark-mode {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --card-bg: #444444;
+    --button-color: #2196f3;
+    --button-hover: #1976d2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: -40px;  /* Offset to account for the theme toggle */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: auto;
+    background: none;
+    color: var(--text-color);
+    font-size: 24px;
+}
+
+.theme-toggle:hover {
+    background: none;
+    opacity: 0.8;
+}
+
+.light-icon {
+    display: none;
+}
+
+.dark-mode .light-icon {
+    display: inline-block;
+}
+
+.dark-mode .dark-icon {
+    display: none;
+}
